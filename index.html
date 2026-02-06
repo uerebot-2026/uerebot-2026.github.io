@@ -2,24 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UEREBot</title>
+  <title>UEREBot: Learning Safe Quadrupedal Locomotion under Unstructured Environments and High-Speed Dynamic Obstacles</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Bulma CSS (same style family as REBot) -->
+  <!-- Bulma CSS (same family as REBot) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
 
   <style>
     body { font-family: 'Noto Sans', sans-serif; }
     .title-container { max-width: 75%; margin: auto; }
     .title-container h1 { margin-bottom: 2.5rem; }
+
+    .main-video {
+      width: 100%;
+      max-width: 50%;
+      aspect-ratio: 16 / 9;
+      margin: auto;
+      display: block;
+      margin-top: 3.5rem;
+    }
+
+    .abstract { max-width: 50%; margin: 2rem auto; }
+    .abstract p { text-align: justify; font-size: 1.2rem; line-height: 1.6; }
   </style>
 </head>
 
 <body>
-  <!-- Title (REBot-like skeleton, content removed) -->
+  <!-- Title + Main Video (REBot-like minimal) -->
   <section class="section has-text-centered">
     <div class="title-container">
-      <h1 class="title is-1">UEREBot</h1>
+      <h1 class="title is-1">
+        UEREBot: Learning Safe Quadrupedal Locomotion under Unstructured Environments and High-Speed Dynamic Obstacles
+      </h1>
+    </div>
+
+    <iframe class="main-video"
+      src="https://www.youtube.com/embed/T36Tda_7ye0"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+  <!-- Abstract (REBot-like) -->
+  <section class="section">
+    <div class="abstract">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <p>
+        Quadruped robots are increasingly deployed in unstructured environments. Safe locomotion in these settings requires long-horizon goal progress, passability over uneven terrain and static constraints, and collision avoidance against high-speed dynamic obstacles. A single system cannot fully satisfy all three objectives simultaneously: planning-based decisions can be too slow, while purely reactive decisions can sacrifice goal progress and passability. To resolve this conflict, we propose UEREBot (Unstructured-Environment Reflexive Evasion Robot), a hierarchical framework that separates slow planning from instantaneous reflexive evasion and coordinates them during execution. UEREBot formulates the task as a constrained optimal control problem blueprint. It adopts a spatial--temporal planner that provides reference guidance toward the goal and threat signals. It then uses a threat-aware handoff to fuse navigation and reflex actions into a nominal command, and a control barrier function shield as a final execution safeguard. We evaluate UEREBot in Isaac Lab simulation and deploy it on a Unitree Go2 quadruped equipped with onboard perception. Across diverse environments with complex static structure and high-speed dynamic obstacles, UEREBot achieves higher avoidance success and more stable locomotion while maintaining goal progress than representative baselines, demonstrating improved safety--progress trade-offs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pipeline / Framework Figure (REBot-like, at the bottom) -->
+  <section class="section">
+    <div class="container has-text-centered">
+      <h2 class="title is-3">Pipeline</h2>
+      <img src="figure/pipeline.png" alt="Pipeline / Framework Figure" style="max-width: 70%; height: auto;">
     </div>
   </section>
 </body>
