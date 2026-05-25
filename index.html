@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UEREBot: Learning Safe Quadrupedal Locomotion under Unstructured Environments and High-Speed Dynamic Obstacles</title>
+  <title>UEREBot: Learning Safe Quadrupedal Navigation under Unstructured Environments and High-Speed Dynamic Obstacles</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bulma CSS (same family as REBot) -->
@@ -36,12 +36,12 @@
   <section class="section has-text-centered">
     <div class="title-container">
       <h1 class="title is-1">
-        UEREBot: Learning Safe Quadrupedal Locomotion under Unstructured Environments and High-Speed Dynamic Obstacles
+        UEREBot: Learning Safe Quadrupedal Navigation under Unstructured Environments and High-Speed Dynamic Obstacles
       </h1>
     </div>
 
     <iframe class="main-video"
-      src="https://www.youtube.com/embed/T36Tda_7ye0"
+      src="https://www.youtube.com/embed/j3-Bqx4Ptiw"
       frameborder="0"
       allow="autoplay; encrypted-media"
       allowfullscreen>
@@ -53,7 +53,7 @@
     <div class="abstract">
       <h2 class="title is-3 has-text-centered">Abstract</h2>
       <p>
-        Quadruped robots are increasingly deployed in unstructured environments. Safe locomotion in these settings requires long-horizon goal progress, passability over uneven terrain and static constraints, and collision avoidance against high-speed dynamic obstacles. A single system cannot fully satisfy all three objectives simultaneously: planning-based decisions can be too slow, while purely reactive decisions can sacrifice goal progress and passability. To resolve this conflict, we propose UEREBot (Unstructured-Environment Reflexive Evasion Robot), a hierarchical framework that separates slow planning from instantaneous reflexive evasion and coordinates them during execution. UEREBot formulates the task as a constrained optimal control problem blueprint. It adopts a spatial--temporal planner that provides reference guidance toward the goal and threat signals. It then uses a threat-aware handoff to fuse navigation and reflex actions into a nominal command, and a control barrier function shield as a final execution safeguard. We evaluate UEREBot in Isaac Lab simulation and deploy it on a Unitree Go2 quadruped equipped with onboard perception. Across diverse environments with complex static structure and high-speed dynamic obstacles, UEREBot achieves higher avoidance success and more stable locomotion while maintaining goal progress than representative baselines, demonstrating improved safety--progress trade-offs.
+        Safe quadrupedal navigation in unstructured environments requires long-horizon goal progress, passability over uneven terrain and static obstacles, and collision avoidance against high-speed dynamic obstacles under limited reaction time. Planning-based decisions can be too slow, while purely reactive decisions can sacrifice goal progress and passability. To resolve this conflict, we propose UEREBot (Unstructured-Environment Reflexive Evasion Robot), a hierarchical framework that separates slow planning from instantaneous reflexive evasion and coordinates them during execution. UEREBot adopts a spatial--temporal planner that provides reference guidance toward the goal, obstacle predictions, and threat signals. It then uses a threat-aware handoff to fuse navigation and reflex commands, and a control barrier function shield as a final command filter. We evaluate UEREBot in Isaac Lab simulation and deploy it on a Unitree Go2 quadruped equipped with onboard perception. Across diverse environments with complex static structure and high-speed dynamic obstacles, UEREBot achieves higher avoidance success than representative baselines while maintaining goal progress, demonstrating improved safety--progress trade-offs.
       </p>
     </div>
   </section>
